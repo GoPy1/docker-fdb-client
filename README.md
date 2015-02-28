@@ -6,7 +6,7 @@ Based on Mike McMahon's [excellent scripts](https://bitbucket.org/mmcm/sql-layer
 
 # Usage
 
-This images can be used directly as a way to get access to the `fdbcli` utility.
+This image can be used directly as a way to get access to the `fdbcli` utility.
 
 ``` sh
 # Run a FoundationDB Server
