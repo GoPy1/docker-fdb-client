@@ -22,6 +22,14 @@ You can also run fdbcli in interactive mode:
 docker run -it --rm --volumes-from fdb quay.io/ripple/fdb-client fdbcli
 ```
 
+## Connect to an existing FoundationDB server outside of Docker
+
+Mount the existing cluster file on the Docker host into the container as `/etc/foundationdb/fdb.cluster`. Make sure that it is readable by everyone, as user ids may not line up.
+
+``` sh
+docker run --rm -v <path to cluster file>:/etc/foundationdb/fdb.cluster:r quay.io/ripple/fdb-client fdbcli --exec "status details"
+```
+
 # Related Images
 
 | Image | [GitHub](https://github.com) | [Quay.io](https://quay.io) |
